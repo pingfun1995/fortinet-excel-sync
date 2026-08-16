@@ -1,0 +1,27 @@
+{
+  "firewalls": [
+    {
+      "name": "FW-Main",
+      "host": "192.168.1.1",
+      "port": 22,
+      "username": "admin",
+      "password": "CHANGE_ME",
+      "device_type": "fortinet"
+    }
+  ],
+  "excel": {
+    "path": "ips.xlsx",
+    "sheet_name": null,
+    "name_column": "Name",
+    "ip_column": "IP",
+    "firewall_column": "Firewall"
+  },
+  "sync": {
+    "poll_interval_seconds": 5,
+    "delay_between_commands_seconds": 3,
+    "delete_removed_objects": true
+  },
+  "state_file": "sync_state.json",
+  "report_file": "reports/sync_report.xlsx",
+  "log_file": "fortinet_sync.log"
+}
