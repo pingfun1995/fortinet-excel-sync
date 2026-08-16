@@ -1,5 +1,22 @@
 # Fortinet Excel Address Sync
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![Platform](https://img.shields.io/badge/platform-Windows-lightgrey)
+
+> Watches an Excel sheet (Name / IP / Firewall) and auto-syncs FortiGate/FortiOS
+> firewall **address objects** over SSH whenever the sheet is saved — adds new
+> IPs, skips ones that already exist, removes objects deleted from the sheet,
+> supports multiple firewalls at once, and can run as a Windows service.
+> No more manually typing `config firewall address` into the FortiOS CLI for
+> every new IP a colleague drops in a spreadsheet.
+>
+> Built with [netmiko](https://github.com/ktbyers/netmiko) + [openpyxl](https://openpyxl.readthedocs.io/).
+> Persian documentation below (فارسی) — this is a network-admin tool primarily
+> used in Fortinet-heavy environments where changes are tracked via Excel.
+
+---
+
 اسکریپتی که یک فایل اکسل (Name / IP) رو زیر نظر می‌گیره و به محض این‌که آپدیتش کنی،
 خودش با SSH به فایروال (یا فایروال‌های) Fortinet وصل می‌شه و address objectها رو
 همگام می‌کنه — بدون این‌که خودت مجبور باشی دستی وارد CLI فایروال بشی.
