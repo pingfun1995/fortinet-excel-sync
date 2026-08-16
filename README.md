@@ -1,4 +1,4 @@
-# Fortinet Excel Address Sync
+# Fortinet Excel Address & IPsec Sync
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
@@ -10,12 +10,14 @@
 
 ## 🇬🇧 English
 
-Watches an Excel sheet (`Name` / `IP` / `Firewall`) and auto-syncs
-FortiGate/FortiOS firewall **address objects** over SSH whenever the sheet is
-saved — adds new IPs, skips ones that already exist, removes objects deleted
-from the sheet, supports multiple firewalls at once, and can run as a Windows
-service. No more manually typing `config firewall address` into the FortiOS
-CLI for every new IP a colleague drops in a spreadsheet.
+Watches an Excel file and auto-syncs FortiGate/FortiOS over SSH whenever it's
+saved — one sheet (`Name` / `IP` / `Firewall`) drives **address objects**, an
+optional second sheet drives full **route-based IPsec site-to-site tunnels**
+(Phase1, Phase2, static route, and policies). Adds new entries, skips ones
+that already exist, removes objects deleted from the sheet, supports multiple
+firewalls at once, and can run as a Windows service. No more manually typing
+`config firewall address` or building a VPN tunnel by hand in the FortiOS CLI
+every time someone drops a new IP or a new site in a spreadsheet.
 
 Built with [netmiko](https://github.com/ktbyers/netmiko) +
 [openpyxl](https://openpyxl.readthedocs.io/).
@@ -213,9 +215,11 @@ MIT — see [LICENSE](LICENSE).
 
 ## 🇮🇷 فارسی
 
-اسکریپتی که یک فایل اکسل (Name / IP) رو زیر نظر می‌گیره و به محض این‌که آپدیتش کنی،
-خودش با SSH به فایروال (یا فایروال‌های) Fortinet وصل می‌شه و address objectها رو
-همگام می‌کنه — بدون این‌که خودت مجبور باشی دستی وارد CLI فایروال بشی.
+اسکریپتی که یک فایل اکسل رو زیر نظر می‌گیره و به محض این‌که آپدیتش کنی، خودش با SSH
+به فایروال (یا فایروال‌های) Fortinet وصل می‌شه و همگام‌سازی می‌کنه — یه شیت (Name / IP /
+Firewall) برای **address objectها**، و یه شیت دوم اختیاری برای **تانل‌های IPsec سایت‌به‌سایت
+route-based کامل** (Phase1، Phase2، static route و پالیسی‌ها). بدون این‌که خودت مجبور باشی
+دستی وارد CLI فایروال بشی و برای هر IP یا هر سایت جدید دستی تانل بزنی.
 
 ### قابلیت‌ها
 
