@@ -16,6 +16,22 @@
     "ip_column": "IP",
     "firewall_column": "Firewall"
   },
+  "ipsec": {
+    "sheet_name": "Tunnels",
+    "name_column": "Name",
+    "remote_gateway_column": "RemoteGateway",
+    "psk_column": "PSK",
+    "local_subnet_column": "LocalSubnet",
+    "remote_subnet_column": "RemoteSubnet",
+    "interface_column": "Interface",
+    "firewall_column": "Firewall",
+    "default_wan_interface": "wan1",
+    "default_lan_interface": "internal",
+    "ike_version": "2",
+    "phase1_proposal": "aes256-sha256",
+    "phase2_proposal": "aes256-sha256",
+    "dhgrp": "14"
+  },
   "sync": {
     "poll_interval_seconds": 5,
     "delay_between_commands_seconds": 3,
